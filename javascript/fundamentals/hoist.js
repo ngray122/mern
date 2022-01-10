@@ -2,7 +2,7 @@
 // ex:
 console.log(hello);
 var hello = 'world';
-// output:Uncaught ReferenceError: hello is not defined
+// output:undefined
 
 //  my prediction
 var hello
@@ -16,21 +16,23 @@ console.log(hello)
 // ex
 var needle = 'haystack';
 test();
-// output:magnet
 function test() {
-    var needle = 'magnet';
+    var needle = 'magnet'
     console.log(needle);
 }
+// output:magnet
+
 
 //my prediction
 var needle
-test()
 // output:magnet
 function test() {
-    var needle = 'magnet'
+    var needle
+    needle = 'magnet'
     console.log(needle)
 }
 var needle = 'haystack'
+test();
 
 
 
@@ -44,19 +46,20 @@ function print() {
 }
 console.log(brendan);
 // output: supercool
+
 // prediction
 var brendan = 'super cool';
 function print() {
     brendan = 'only okay';
     console.log(brendan);
 }
-console.log(brendan);
+brendan = 'super cool'
 // output: super cool
 
 
 // 4
 // ex
-console.log(food);
+// console.log(food);
 eat();
 function eat() {
     food = 'half-chicken';
@@ -66,58 +69,56 @@ function eat() {
 // output: Uncaught ReferenceError: food is not defined
 // output:Uncaught ReferenceError: eat is not defined
 // prediction
-var food = 'chicken';
-eat();
 // output: half-chicken
 function eat() {
     var food
     food = 'half-chicken';
     console.log(food);
-    var food = 'gone';
+    food= 'gone'
 }
-console.log(food);
-// output: chicken
+// console.log(food);// food is not defined outside of scope
+eat();
+// output: half-chicken
 
 
 
-// 5
-// ex
-mean();
-console.log(food);
+// // 5
+// // ex
+// mean(); // // output: TypeError: mean is not a function
+// console.log(food);
 var mean = function () {
     food = "chicken";
     console.log(food);
     var food = "fish";
     console.log(food);
 }
-console.log(food);
-// output: Uncaught ReferenceError: mean is not defined
+// console.log(food);
 
-// prediction
-mean();
-// output: chicken
-// output: fidh
+
+// // // prediction
+
 var mean = function () {
     var food
     food = "chicken";
-    var food = "fish";
     console.log(food);
+    food = "fish";
     console.log(food);
 }
-console.log(food);
-console.log(food);
-// output: chicken
-// output: chicken
+mean()
+// // output: chicken
+// // output: fish
+// console.log(food);
+// console.log(food);
+// // output: food is not defined outside of function sscope
 
 
-// 6
-// ex
+// // 6
+// // ex
 console.log(genre);
-// output: Uncaught ReferenceError: genre is not defined
+// // output: undefined
 var genre = "disco";
 rewind();
-// output: Uncaught ReferenceError: rewind is not defined
-
+// // output: r&b
 function rewind() {
     genre = "rock";
     console.log(genre);
@@ -129,57 +130,58 @@ console.log(genre);
 
 // prediction
 var genre
-rewind();
-// output:rock
-// output:r&b
 function rewind() {
     var genre
     genre = "rock";
     console.log(genre);
-    var genre = "r&b";
+    genre = "r&b";
     console.log(genre);
 }
-console.log(genre);
-// output:dicso
-console.log(genre);
-// output:disco
+console.log(genre); //output: reock
+genre = 'disco'
 
-// 7
-// ex
-dojo = "san jose";
-// output:'san jose'
-console.log(dojo);
-// output:san jose
+rewind();
+// output:r&b
 
-learn();
-// output: Uncaught ReferenceError: learn is not defined
-function learn() {
-    dojo = "seattle";
-    console.log(dojo);
-    var dojo = "burbank";
-    console.log(dojo);
-}
-console.log(dojo);
+// // 7
+// // ex
+// dojo = "san jose";
+// // output:'san jose'
+// console.log(dojo);
+// // output:san jose
+
+// learn();
+// // output: Uncaught ReferenceError: learn is not defined
+// function learn() {
+//     dojo = "seattle";
+//     console.log(dojo);
+//     var dojo = "burbank";
+//     console.log(dojo);
+// }
+// console.log(dojo);
 
 // prediction
-dojo
-// output:'san jose'
-learn();
-// output: seattle
-// output: burbank
+// dojo //dojo not defined
 function learn() {
     var dojo
     dojo = "seattle";
     console.log(dojo);
-    var dojo = "burbank";
+    // output: seattle
+    dojo = "burbank";
     console.log(dojo);
+    //output is burbank
 }
 dojo = "san jose";
-// output:'san jose'
 console.log(dojo);
-// output: san jose
+// output:'san jose' 1st san jose
+learn();
+// output: seattle, burbank
 console.log(dojo);
-// output: san jose
+// output: san jose 2nd san jose
+
+
+
+
 
 // 8
 // ex
@@ -202,7 +204,7 @@ function makeDojo(name, students) {
 }
 // prediction
 function makeDojo(name, students) {
-    let dojo = {};
+    const dojo = {};
     dojo.name = name;
     dojo.students = students;
     if (dojo.students > 50) {
