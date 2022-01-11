@@ -11,7 +11,7 @@ class Ninja {
     }
     
     showStats() {
-        console.log(`Ninja Stats - Name: ${this.name}, Strength: ${this.strength}, Speed: ${this.speed}, Health: ${this.health}`)
+        console.log(`Name: ${this.name}, Strength: ${this.strength}, Speed: ${this.speed}, Health: ${this.health}`)
     }
 
     drinkSake() {
@@ -22,7 +22,7 @@ class Ninja {
 
 }
 
-const ninja1 = new Ninja("Jackie", 7);
+const ninja1 = new Ninja("Jackie Chan", 7);
 console.log(ninja1)
 ninja1.sayName();
 ninja1.showStats();
@@ -30,3 +30,20 @@ ninja1.drinkSake();
 ninja1.drinkSake();
 
 
+class Sensi extends Ninja {
+    constructor(wisdom) {
+        super("Bruce Lee", 200, 10, 10)
+        this.wisdom = 10
+    }
+
+    speakWisdom() {
+        this.drinkSake();
+        console.log(`Never eat the yellow snow, 10 health has been added! Your health is now ${this.health}`)
+    }
+}
+
+const sensi1 = new Sensi("Bruce Lee");
+sensi1.speakWisdom();
+console.log(sensi1);
+sensi1.showStats();
+sensi1.sayName();
