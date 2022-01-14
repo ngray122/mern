@@ -10,15 +10,24 @@ const Ninja =() => {
     // create state var for every ninja that has been submitted in the form
     let[listOfNinjas, setlistOfNinjas] = useState([]);
 
+    let[graduated, setGraduated] = useState(false)
+
 
     const createNinja = (e) => { 
         e.preventDefault();
         console.log("submitted the form")
-        console.log(ninjaName, imgUrl, favColor)  //should be able to see state var from form
-        let ninjaObj = {ninjaName, imgUrl, favColor}
+        console.log(ninjaName, imgUrl, favColor, graduated)  //should be able to see state var from form
+        let ninjaObj = {ninjaName, imgUrl, favColor, graduated}
         console.log(ninjaObj)
         
         setlistOfNinjas([...listOfNinjas, ninjaObj]) // ...to keep objs that were already there
+    }
+
+    const toggleGraduation = (i) => {
+        console.log("grad click " +i)
+        let[...copyOfListOfNinjas] = listOfNinjas
+        copyOfListOfNinjas[i].graduated = !copyOfListOfNinjas[i].graduated
+        setlistOfNinjas(copyOfListOfNinjas)
     }
 
 
@@ -45,12 +54,13 @@ const Ninja =() => {
         <h3>Rob's MERN Ninjas!</h3>
 
         {
-            listOfNinjas.map((ninja) => {
+            listOfNinjas.map((ninja, i) => {
                 return (
-                    <div style={{border: "1px solid black", backgroundColor: ninja.favColor, }}>
+                    <div key={i }style={{border: "1px solid black", backgroundColor: ninja.favColor, display:"inline-block", textDecoration: ninja.graduated? "line-through":"none"}}>
                     <h1>{ninja.ninjaName}</h1>
                     <p><img src={ninja.imgUrl} alt='' width="100px"></img></p>
                     <p>Favorite Color: {ninja.favColor}</p>
+                    <p><input type="checkbox" className="" onClick = {()=>toggleGraduation(i)}/>Graudate</p>
                     </div>
 
                 )
