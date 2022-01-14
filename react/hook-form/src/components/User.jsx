@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+
 const formStyle = {
     width: '400px'
 };
@@ -94,7 +95,7 @@ const User = props => {
 {/* const validatePassword = (e) => {
 
 if (confirmPassword.length < 8 && confirmPassword !== password) {
-                            setConfirmPassword(e)
+    setConfirmPassword(e)
     return (<p className="text-danger">Passwords must match!</p>)
 } else if (confirmPassword < 8 && confirmPassword > 0) {
     return (<p>"Hello"</p>)
