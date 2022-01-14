@@ -8,10 +8,9 @@ const Boxes = props => {
 
     const createBox = (e) => {
         e.preventDefault();
-        console.log('form works')
         let boxObj = { color }
-
         setListOfBoxes([...listOfBoxes, boxObj])
+        document.getElementById('boxcol').value = ''
     }
 
 
@@ -21,7 +20,8 @@ const Boxes = props => {
             <form onSubmit={createBox}>
                 <div className="form-group">
                     <label htmlFor="" className="form-label"></label>
-                    <input type="text" className="form-control" onChange={(e) => setColor(e.target.value)} />
+                    <input id="boxcol" type="text" className="form-control" onChange={(e) => setColor(e.target.value)} />
+
                     <input type="submit" value="Create Box" />
                 </div>
             </form>
