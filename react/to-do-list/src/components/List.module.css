@@ -1,4 +1,33 @@
 * {
-  
+    background-color: cornsilk;
+    
 }
 
+
+.container {
+    padding: 30px;
+    width: 600px;
+}
+
+/* form {
+    gap: 20px;
+} */
+
+
+.list {
+    border: 1px solid black;
+    width: 200px;
+    gap:20px;
+    padding: 5px;
+}
+
+.button {
+    background-color: gray;
+    color: white;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+#addTask {
+    gap:50px
+}
