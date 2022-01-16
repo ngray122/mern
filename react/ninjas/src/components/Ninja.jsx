@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from "./Ninja.module.css"
 
 
 const Ninja =() => {
@@ -30,7 +31,6 @@ const Ninja =() => {
         setlistOfNinjas(copyOfListOfNinjas)
     }
 
-
     return (
 
         <div>
@@ -56,19 +56,15 @@ const Ninja =() => {
         {
             listOfNinjas.map((ninja, i) => {
                 return (
-                    <div key={i }style={{border: "1px solid black", backgroundColor: ninja.favColor, display:"inline-block", textDecoration: ninja.graduated? "line-through":"none"}}>
+                    <div className={styles.ninja} key={i }style={{backgroundColor: ninja.favColor, textDecoration: ninja.graduated? "line-through":"none"}}>
                     <h1>{ninja.ninjaName}</h1>
                     <p><img src={ninja.imgUrl} alt='' width="100px"></img></p>
                     <p>Favorite Color: {ninja.favColor}</p>
                     <p><input type="checkbox" className="" onClick = {()=>toggleGraduation(i)}/>Graudate</p>
                     </div>
-
                 )
             })
         }
-
-
-
         </div>
 
     )
