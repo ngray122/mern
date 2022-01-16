@@ -10,8 +10,6 @@ const List = () => {
     let [completed, setCompleted] = useState(false)
 
     const createTask = (e) => {
-        
-    
         e.preventDefault();
         let listObj = { listItem }
         setlistOfTasks([...listOfTasks, listObj]) 
@@ -35,9 +33,9 @@ const List = () => {
     return (
         <div className={styles.container}>
             <h1>To Do List</h1>
-            <form onSubmit={createTask}>
+            <form onSubmit={createTask} className={styles.form}>
                 <div className="form-group" id={styles.addTask}>
-                    <label htmlFor="">Add task:</label>
+                    <label htmlFor="" >Add task:</label>
                     <input type="text" className="form-control" id="taskInput" onChange={(e) => setListItem(e.target.value)} />
                 </div>
                 <input type="submit" value="Add Item"  className={styles.button}/>

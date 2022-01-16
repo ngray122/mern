@@ -9,9 +9,10 @@
     width: 600px;
 }
 
-/* form {
-    gap: 20px;
-} */
+.form {
+    gap: 80px;
+}
+
 
 
 .list {
@@ -28,6 +29,6 @@
     padding: 5px;
 }
 
-#addTask {
+/* #addTask {
     gap:50px
-}
+} */
