@@ -12,27 +12,33 @@ const List = () => {
     const createTask = (e) => {
         e.preventDefault();
         let listObj = { listItem }
-        console.log(listObj)
-
         setlistOfTasks([...listOfTasks, listObj]) 
+        document.getElementById('taskInput').value = ''
+
     }
 
     const toggleCompleted = (i) => {
-        console.log("task click " +i)
         let[...copyOfListOfTasks] = listOfTasks
         copyOfListOfTasks[i].completed = !copyOfListOfTasks[i].completed
         setlistOfTasks(copyOfListOfTasks)
     }
 
+    const deleteTask = (e, i) => {
+        e.preventDefault();
+        let[...copyOfListOfTasks] = listOfTasks
+        copyOfListOfTasks.splice(i, 1)
+        console.log("index: " +i)
+        console.log(copyOfListOfTasks)
+        setlistOfTasks(copyOfListOfTasks)
+    }
+
     return (
         <div className="container">
-
             <h1>To Do List</h1>
             <form onSubmit={createTask}>
-
                 <div className="form-group">
                     <label htmlFor="">Add task:</label>
-                    <input type="text" className="form-control" onChange={(e) => setListItem(e.target.value)} />
+                    <input type="text" className="form-control" id="taskInput" onChange={(e) => setListItem(e.target.value)} />
                 </div>
                 <input type="submit" value="Add Item" />
             </form>
@@ -46,6 +52,7 @@ const List = () => {
                             <div className={styles.list} key={i} style={{ textDecoration: list.completed ? "line-through" : "none" }}>
                                 <h6>{list.listItem}</h6>
                                 <p><input type="checkbox" className="" onClick={() => toggleCompleted(i)} />Completed</p>
+                                <input type="submit" onClick={deleteTask} value="Delete Task"/>
                             </div>
                         )
                     })
