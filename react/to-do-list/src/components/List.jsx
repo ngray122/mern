@@ -24,8 +24,6 @@ const List = () => {
         setlistOfTasks(copyOfListOfTasks)
     }
 
-
-
     return (
         <div className="container">
 
@@ -45,17 +43,14 @@ const List = () => {
 
                     listOfTasks.map((list, i) => {
                         return (
-                            <div className={styles.listItem} key={i} style={{ textDecoration: listItem.completed ? "line-through" : "none" }}>
+                            <div className={styles.list} key={i} style={{ textDecoration: list.completed ? "line-through" : "none" }}>
                                 <h6>{list.listItem}</h6>
-                                <p><input type="checkbox" className="" onClick={() => setCompleted(i)} />Completed</p>
+                                <p><input type="checkbox" className="" onClick={() => toggleCompleted(i)} />Completed</p>
                             </div>
                         )
                     })
                 }
             </div>
-
-
-
 
         </div>
 
