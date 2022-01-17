@@ -49,13 +49,15 @@ const addTask = (task) => {
   return (
 
     <div className="container">
-      <Header onAdd={()=> setShowAddTask(!showAddTask)}></Header>
+      <Header 
+      onAdd={()=> setShowAddTask(!showAddTask)} 
+      showAdd={showAddTask} >
+      </Header>
 
       {showAddTask && <AddTask onAdd={addTask}></AddTask>}
 
       {/* if tasks arr has tasks, display them on the page ELSE display "there are no tasks to be displayed "*/}
       {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder}></Tasks> : 'No tasks to show'}
-
     </div>
   );
 }
