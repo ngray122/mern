@@ -1,34 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap');
+
+
+
 * {
+    margin: 0;
+    padding:0;
     background-color: cornsilk;
-    
+    box-sizing: border-box;
+    font-family: 'Railway', sans-serif;
 }
 
 
 .container {
     padding: 30px;
-    width: 600px;
+    min-height: 300px;
+    max-width: 500px;
+    border: 2px solid gray;
+    border-radius: 2%;
+    margin-top: 50px;
+    background-color: rgb(240, 210, 207);
+
 }
 
-.form {
-    gap: 80px;
+form, h2, h1, label, .formInput, #formLabel {
+    background-color: rgb(240, 210, 207);
+
 }
 
+.formInput {
+    margin: 20px 0;
+}
 
+h6 {
+    font-weight: bolder;
+    font-size: 20px;
+    text-decoration: underline;
+    background-color: rgb(243, 191, 186);
+
+}
 
 .list {
-    border: 1px solid black;
+    border: 2px solid gray;
+    border-radius: 2%;
     width: 200px;
     gap:20px;
-    padding: 5px;
+    padding: 15px;
+    margin: 20px;
+    background-color: rgb(243, 191, 186);
+}
+
+p {
+    background-color: rgb(243, 191, 186);
+
 }
 
 .button {
     background-color: gray;
     color: white;
     border-radius: 3px;
-    padding: 5px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    
 }
 
-/* #addTask {
-    gap:50px
+.button:active {
+    transform: scale(0.98);
+}
+
+/* .form-control label{
+    margin: 30px;
 } */
+
+#input {
+    width: 100%;
+    height: 40px;
+    margin: 10px;
+    padding: 3px 7px;
+    font-size: 17px;
+    
+} 
+
+#check {
+  
+    margin: 5px;
+}
+
+#check:active {
+    transform: scale(0.98);
+}

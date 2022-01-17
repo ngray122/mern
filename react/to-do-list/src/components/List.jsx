@@ -12,8 +12,9 @@ const List = () => {
     const createTask = (e) => {
         e.preventDefault();
         let listObj = { listItem }
-        setlistOfTasks([...listOfTasks, listObj]) 
-        document.getElementById('taskInput').value = ''
+        setlistOfTasks([...listOfTasks, listObj])
+        // setListItem('')
+        // document.getElementById('input').value = ' '
 
     }
 
@@ -34,24 +35,25 @@ const List = () => {
         <div className={styles.container}>
             <h1>To Do List</h1>
             <form onSubmit={createTask} className={styles.form}>
-                <div className="form-group" id={styles.addTask}>
+                <div className="form-group" id={styles.formLabel}>
                     <label htmlFor="" >Add task:</label>
-                    <input type="text" className="form-control" id="taskInput" onChange={(e) => setListItem(e.target.value)} />
+                    <input type="text" className="form-control" id={styles.input} placeholder="Add Task" onChange={(e) => setListItem(e.target.value)} />
                 </div>
                 <input type="submit" value="Add Item"  className={styles.button}/>
             </form>
-            <div>
+            <div className={styles.formInput}>
                 <hr />
 
                 <h2>Nicole's To Do List</h2>
-                <br />
                 {
 
                     listOfTasks.map((list, i) => {
                         return (
                             <div className={styles.list} key={i} style={{ textDecoration: list.completed ? "line-through" : "none" }}>
                                 <h6>{list.listItem}</h6>
-                                <p><input type="checkbox" className="" onClick={() => toggleCompleted(i)} />Completed</p>
+
+                                <p><input className="form-control-check" id={styles.check} type="checkbox"  onClick={() => toggleCompleted(i)} />Complete</p>
+                                
                                 <input type="submit" onClick={deleteTask} value="Delete Task" className={styles.button}/>
                             </div>
                         )
