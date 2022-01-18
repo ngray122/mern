@@ -13,7 +13,7 @@ const List = () => {
         e.preventDefault();
         let listObj = { listItem }
         setlistOfTasks([...listOfTasks, listObj])
-        // setListItem('')
+        setListItem(' ')
         // document.getElementById('input').value = ' '
 
     }
