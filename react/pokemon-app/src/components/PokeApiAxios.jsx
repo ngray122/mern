@@ -1,19 +1,17 @@
 import React, { useState } from 'react'
+import axios from 'axios'
 
 
-const PokeApi = () => {
+const PokeApiAxios = () => {
 
     let [pokeInfo, setPokeInfo] = useState([]);
 
     const getPokemonInfo = () => {
-
-        fetch("https://pokeapi.co/api/v2/pokemon?limit=807")
-        .then(response =>{
-            return response.json();
-        })
+        console.log("clicked button")
+        axios.get("https://pokeapi.co/api/v2/pokemon?limit=10000")
         .then(response => {
-            console.log("response =>", response.results);
-            setPokeInfo(response.results)
+            console.log("response =>", response);
+            setPokeInfo(response.data.results)
         })
         .catch(err => {
             console.log("error!! ====> ", err);
@@ -27,7 +25,6 @@ const PokeApi = () => {
             <h1>Pokemon Information</h1>
             <button onClick = {getPokemonInfo}>Fetch Poke</button>
             {
-
                 pokeInfo.map((poke, i) => {
                     return (
 
@@ -43,4 +40,4 @@ const PokeApi = () => {
     )
 }
 
-export default PokeApi
+export default PokeApiAxios

@@ -13,9 +13,7 @@ const List = () => {
         e.preventDefault();
         let listObj = { listItem }
         setlistOfTasks([...listOfTasks, listObj])
-        setListItem(' ')
-        // document.getElementById('input').value = ' '
-
+        setListItem('')
     }
 
     const toggleCompleted = (i) => {
@@ -37,7 +35,7 @@ const List = () => {
             <form onSubmit={createTask} className={styles.form}>
                 <div className="form-group" id={styles.formLabel}>
                     <label htmlFor="" >Add task:</label>
-                    <input type="text" className="form-control" id={styles.input} placeholder="Add Task" onChange={(e) => setListItem(e.target.value)} />
+                    <input type="text" className="form-control" id={styles.input} value={listItem} placeholder="Add Task" onChange={(e) => setListItem(e.target.value)} />
                 </div>
                 <input type="submit" value="Add Item"  className={styles.button}/>
             </form>
