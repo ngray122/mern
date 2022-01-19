@@ -1,11 +1,18 @@
 import React from "react";
 import { useParams } from "react-router-dom"
 
-const Word = (props) => {
-    const { words } = useParams();
+const Word = () => {
+    let { word, color = "black", backColor = "white" } = useParams();
+    console.log(word, color, backColor)
+
     return (
         <div>
-            <h1>The word is: {words}</h1>
+            {
+                isNaN(word) ?
+                    <h1 style={{backgroundColor: `${backColor}`, color: `${color}`}}>Your word is: {word}</h1> :
+                    <h1>Not a word!</h1>
+            }
+
         </div>
     )
 }

@@ -1,38 +1,33 @@
-import React, {useState} from "react"
+import React from "react"
+import './App.css';
 import {
   BrowserRouter,
   Link,
   Switch,
   Route
 } from "react-router-dom"
-import { useParams } from "react-router-dom"
 import Word from "./components/Word";
 import Number from "./components/Number";
-
-
-
-
+import ColorWord from "./components/ColorWord";
 
 
 
 function App() {
 
-  // let [number, setNumber] = useState()
-  // let [word, setWord] = useState("")
-
   return (
+    <BrowserRouter>
     <div className="container">
       <h1>Routing Practice</h1>
-      <BrowserRouter>
       <ul>
         <li><Link to="/home">To route: home</Link></li>
 
         {/* Number Component */}
-        <li> <Link to="/num">To route: number</Link></li>
+        <li> <Link to="/pick/4">To route: number</Link></li>
 
         {/* Word Component */}
-        <li> <Link to="/words">To route: word</Link></li>
+        <li> <Link to="/hello">To route: word</Link></li>
 
+        {/* ColorWord Component */}
         <li> <Link to="/hello/blue/red">To route: /hello/blue/red</Link></li>
       </ul>
         
@@ -40,20 +35,22 @@ function App() {
           <Route exact path="/home"><h1>Welcome</h1></Route>
 
           {/* Number Component */}
-          <Route exact path="/:num">
+          <Route exact path="/pick/:num">
             <Number></Number>
           </Route>
 
-          <Route exact path="/:words">
+          {/* Word Component */}
+          <Route exact path="/:word">
             <Word></Word>
           </Route>
 
-          <Route exact path="/hello/blue/red"><h1>Hello blue</h1></Route>
+          {/* ColorWord Component */}
+          <Route exact path="/:word/:backColor/:color">
+          <Word></Word>
+          </Route>
         </Switch>
-
-
-      </BrowserRouter>
     </div>
+    </BrowserRouter>
 
   );
 }
