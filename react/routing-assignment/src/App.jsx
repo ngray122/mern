@@ -1,27 +1,15 @@
-import React from "react"
+import React, {useState} from "react"
 import {
   BrowserRouter,
   Link,
   Switch,
   Route
 } from "react-router-dom"
+import { useParams } from "react-router-dom"
+import Word from "./components/Word";
+import Number from "./components/Number";
 
 
-
-const Number = () => {
-  return (
-    <div>
-      <h1>from number componetn</h1>
-    </div>
-  )
-}
-const Word = () => {
-  return (
-    <div>
-      <h1>The word is: heyyyyyyyyyy</h1>
-    </div>
-  )
-}
 
 
 
@@ -29,25 +17,38 @@ const Word = () => {
 
 function App() {
 
+  // let [number, setNumber] = useState()
+  // let [word, setWord] = useState("")
+
   return (
     <div className="container">
+      <h1>Routing Practice</h1>
       <BrowserRouter>
       <ul>
-        <li><Link to="/home">To route: localhost:3000/home</Link></li>
-        <li> <Link to="/4">To route: localhost:3000/4</Link></li>
-        <li> <Link to="/hello">To route:  localhost:3000/hello</Link></li>
-        <li> <Link to="/hello/blue/red">To route: localhost:3000/hello/blue/red</Link></li>
+        <li><Link to="/home">To route: home</Link></li>
+
+        {/* Number Component */}
+        <li> <Link to="/num">To route: number</Link></li>
+
+        {/* Word Component */}
+        <li> <Link to="/words">To route: word</Link></li>
+
+        <li> <Link to="/hello/blue/red">To route: /hello/blue/red</Link></li>
       </ul>
         
         <Switch>
-          <Route path="/home"><h1>Welcome</h1></Route>
-          <Route path="/4">
-            <Number>The Number is: {}</Number>
+          <Route exact path="/home"><h1>Welcome</h1></Route>
+
+          {/* Number Component */}
+          <Route exact path="/:num">
+            <Number></Number>
           </Route>
-          <Route exact path="/hello">
-            <Word><h1>The word is: {}</h1></Word>
+
+          <Route exact path="/:words">
+            <Word></Word>
           </Route>
-          <Route path="/hello/blue/red">hellobluered</Route>
+
+          <Route exact path="/hello/blue/red"><h1>Hello blue</h1></Route>
         </Switch>
 
 
