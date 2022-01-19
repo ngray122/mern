@@ -8,7 +8,7 @@ import {
 } from "react-router-dom"
 import Word from "./components/Word";
 import Number from "./components/Number";
-// import ColorWord from "./components/ColorWord";
+import ColorWord from "./components/ColorWord";
 
 
 

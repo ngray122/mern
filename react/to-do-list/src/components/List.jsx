@@ -10,21 +10,26 @@ const List = () => {
     let [completed, setCompleted] = useState(false)
 
     const createTask = (e) => {
-        e.preventDefault();
-        let listObj = { listItem }
-        setlistOfTasks([...listOfTasks, listObj])
-        setListItem('')
+        if (listItem === '') {
+            alert('Cannot be blank!!!!!!')
+        } else {
+            e.preventDefault();
+            let listObj = { listItem }
+            setlistOfTasks([...listOfTasks, listObj])
+            setListItem('')
+        }
     }
 
     const toggleCompleted = (i) => {
-        let[...copyOfListOfTasks] = listOfTasks
+        let [...copyOfListOfTasks] = listOfTasks
         copyOfListOfTasks[i].completed = !copyOfListOfTasks[i].completed
         setlistOfTasks(copyOfListOfTasks)
+
     }
 
     const deleteTask = (e, i) => {
         e.preventDefault();
-        let[...copyOfListOfTasks] = listOfTasks
+        let [...copyOfListOfTasks] = listOfTasks
         copyOfListOfTasks.splice(i, 1)
         setlistOfTasks(copyOfListOfTasks)
     }
@@ -37,7 +42,7 @@ const List = () => {
                     <label htmlFor="" >Add task:</label>
                     <input type="text" className="form-control" id={styles.input} value={listItem} placeholder="Add Task" onChange={(e) => setListItem(e.target.value)} />
                 </div>
-                <input type="submit" value="Add Item"  className={styles.button}/>
+                <input type="submit" value="Add Item" className={styles.button} />
             </form>
             <div className={styles.formInput}>
                 <hr />
@@ -50,9 +55,9 @@ const List = () => {
                             <div className={styles.list} key={i} style={{ textDecoration: list.completed ? "line-through" : "none" }}>
                                 <h6>{list.listItem}</h6>
 
-                                <p><input className="form-control-check" id={styles.check} type="checkbox"  onClick={() => toggleCompleted(i)} />Complete</p>
-                                
-                                <input type="submit" onClick={deleteTask} value="Delete Task" className={styles.button}/>
+                                <p><input className="form-control-check" id={styles.check} type="checkbox" onClick={() => toggleCompleted(i)} />Complete</p>
+
+                                <input type="submit" onClick={deleteTask} value="Delete Task" className={styles.button} />
                             </div>
                         )
                     })
