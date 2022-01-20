@@ -1,39 +1,58 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import {useParams} from "react-router"
+import { useParams } from "react-router"
 
 
 const People = () => {
 
     const { id } = useParams();
-    
-    const [personInfo, setPersonInfo] = useState('')
 
     const [listOfPeople, setPeopleList] = useState([])
 
     useEffect(() => {
-        axios.get("https://swapi.dev/api/people/")
+        axios.get(`https://swapi.dev/api/people/`)
             .then(response => {
-                console.log("response =>", response.data);
-                setPersonInfo(response.data.results)
+                // console.log("response =>", response.data);
+                setPeopleList(response.data.results)
+                // console.log(response.data.results)
+                console.log(listOfPeople)
             })
             .catch(err => {
                 console.log("error!! ====> ", err);
             })
-    }, [])
-
-
-
-
-
+    }, [id])
 
 
     return (
         <div>
-            <h1>Hello From People</h1>
             {
-                listOfPeople.map(() => {  })
+                listOfPeople.filter((person, i) => {
+                    return i == id
+                }).map((person) => { 
+                    return(
+                    <>
+                    <h1>Name : {person.name}</h1>
+                    <h3>Height : {person.height}</h3>
+                    <h3>Birth Year : {person.birth_year}</h3>
+                    <h3>Eye Color : {person.eye_color}</h3>
+                    </>
+                    )
+                })
             }
+            {/* {
+                listOfPeople.map((person) => {
+                    return (
+                        <>
+                            <h1>Name : {person.name}</h1>
+                            <h3>Height : {person.height}</h3>
+                            <h3>Birth Year : {person.birth_year}</h3>
+                            <h3>Eye Color : {person.eye_color}</h3>
+                        </>
+                    )
+
+
+                })
+            } */}
         </div>
     )
 }
