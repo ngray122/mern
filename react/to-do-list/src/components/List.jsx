@@ -7,7 +7,7 @@ const List = () => {
 
     let [listOfTasks, setlistOfTasks] = useState([]);
 
-    let [completed, setCompleted] = useState(false)
+    // let [completed, setCompleted] = useState(false)
 
     const createTask = (e) => {
         if (listItem === '') {

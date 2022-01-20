@@ -40,7 +40,7 @@ h6 {
 }
 
 .list {
-    border: 2px solid gray;
+    border: 1px solid gray;
     border-radius: 2%;
     width: 200px;
     gap:20px;
