@@ -1,0 +1,553 @@
+1. Get poke by color id 9
+
+{
+    "id": 9,
+    "name": "white",
+    "names": [
+        {
+            "language": {
+                "name": "ja-Hrkt",
+                "url": "https://pokeapi.co/api/v2/language/1/"
+            },
+            "name": "白い"
+        },
+        {
+            "language": {
+                "name": "fr",
+                "url": "https://pokeapi.co/api/v2/language/5/"
+            },
+            "name": "Blanc"
+        },
+        {
+            "language": {
+                "name": "de",
+                "url": "https://pokeapi.co/api/v2/language/6/"
+            },
+            "name": "Weiß"
+        },
+        {
+            "language": {
+                "name": "es",
+                "url": "https://pokeapi.co/api/v2/language/7/"
+            },
+            "name": "Blanco"
+        },
+        {
+            "language": {
+                "name": "it",
+                "url": "https://pokeapi.co/api/v2/language/8/"
+            },
+            "name": "Bianco"
+        },
+        {
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            },
+            "name": "White"
+        }
+    ],
+    "pokemon_species": [
+        {
+            "name": "butterfree",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/12/"
+        },
+        {
+            "name": "seel",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/86/"
+        },
+        {
+            "name": "dewgong",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/87/"
+        },
+        {
+            "name": "togepi",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/175/"
+        },
+        {
+            "name": "mareep",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/179/"
+        },
+        {
+            "name": "togetic",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/176/"
+        },
+        {
+            "name": "smeargle",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/235/"
+        },
+        {
+            "name": "lugia",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/249/"
+        },
+        {
+            "name": "wingull",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/278/"
+        },
+        {
+            "name": "ralts",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/280/"
+        },
+        {
+            "name": "linoone",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/264/"
+        },
+        {
+            "name": "silcoon",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/266/"
+        },
+        {
+            "name": "kirlia",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/281/"
+        },
+        {
+            "name": "gardevoir",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/282/"
+        },
+        {
+            "name": "vigoroth",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/288/"
+        },
+        {
+            "name": "zangoose",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/335/"
+        },
+        {
+            "name": "absol",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/359/"
+        },
+        {
+            "name": "shelgon",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/372/"
+        },
+        {
+            "name": "pachirisu",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/417/"
+        },
+        {
+            "name": "snover",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/459/"
+        },
+        {
+            "name": "dialga",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/483/"
+        },
+        {
+            "name": "regigigas",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/486/"
+        },
+        {
+            "name": "arceus",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/493/"
+        },
+        {
+            "name": "abomasnow",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/460/"
+        },
+        {
+            "name": "togekiss",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/468/"
+        },
+        {
+            "name": "gallade",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/475/"
+        },
+        {
+            "name": "froslass",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/478/"
+        },
+        {
+            "name": "vanillite",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/582/"
+        },
+        {
+            "name": "emolga",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/587/"
+        },
+        {
+            "name": "foongus",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/590/"
+        },
+        {
+            "name": "frillish",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/592/"
+        },
+        {
+            "name": "tynamo",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/602/"
+        },
+        {
+            "name": "litwick",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/607/"
+        },
+        {
+            "name": "swanna",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/581/"
+        },
+        {
+            "name": "vanillish",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/583/"
+        },
+        {
+            "name": "vanilluxe",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/584/"
+        },
+        {
+            "name": "amoonguss",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/591/"
+        },
+        {
+            "name": "jellicent",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/593/"
+        },
+        {
+            "name": "cubchoo",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/613/"
+        },
+        {
+            "name": "rufflet",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/627/"
+        },
+        {
+            "name": "larvesta",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/636/"
+        },
+        {
+            "name": "reshiram",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/643/"
+        },
+        {
+            "name": "meloetta",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/648/"
+        },
+        {
+            "name": "flabebe",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/669/"
+        },
+        {
+            "name": "pancham",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/674/"
+        },
+        {
+            "name": "furfrou",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/676/"
+        },
+        {
+            "name": "swirlix",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/684/"
+        },
+        {
+            "name": "beartic",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/614/"
+        },
+        {
+            "name": "volcarona",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/637/"
+        },
+        {
+            "name": "floette",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/670/"
+        },
+        {
+            "name": "florges",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/671/"
+        },
+        {
+            "name": "pangoro",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/675/"
+        },
+        {
+            "name": "slurpuff",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/685/"
+        },
+        {
+            "name": "crabominable",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/740/"
+        },
+        {
+            "name": "oranguru",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/765/"
+        },
+        {
+            "name": "passimian",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/766/"
+        },
+        {
+            "name": "drampa",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/780/"
+        },
+        {
+            "name": "nihilego",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/793/"
+        },
+        {
+            "name": "pheromosa",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/795/"
+        },
+        {
+            "name": "kartana",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/798/"
+        },
+        {
+            "name": "blacephalon",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/806/"
+        },
+        {
+            "name": "scorbunny",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/813/"
+        },
+        {
+            "name": "wooloo",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/831/"
+        },
+        {
+            "name": "solgaleo",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/791/"
+        },
+        {
+            "name": "cinderace",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/815/"
+        },
+        {
+            "name": "dubwool",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/832/"
+        },
+        {
+            "name": "milcery",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/868/"
+        },
+        {
+            "name": "snom",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/872/"
+        },
+        {
+            "name": "duraludon",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/884/"
+        },
+        {
+            "name": "glastrier",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/896/"
+        },
+        {
+            "name": "vivillon",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/666/"
+        },
+        {
+            "name": "cursola",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/864/"
+        },
+        {
+            "name": "sirfetchd",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/865/"
+        },
+        {
+            "name": "alcremie",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/869/"
+        },
+        {
+            "name": "frosmoth",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/873/"
+        }
+    ]
+}
+
+2. ability with limit of 8 entries
+{
+    "count": 327,
+    "next": "https://pokeapi.co/api/v2/ability/?offset=8&limit=8",
+    "previous": null,
+    "results": [
+        {
+            "name": "stench",
+            "url": "https://pokeapi.co/api/v2/ability/1/"
+        },
+        {
+            "name": "drizzle",
+            "url": "https://pokeapi.co/api/v2/ability/2/"
+        },
+        {
+            "name": "speed-boost",
+            "url": "https://pokeapi.co/api/v2/ability/3/"
+        },
+        {
+            "name": "battle-armor",
+            "url": "https://pokeapi.co/api/v2/ability/4/"
+        },
+        {
+            "name": "sturdy",
+            "url": "https://pokeapi.co/api/v2/ability/5/"
+        },
+        {
+            "name": "damp",
+            "url": "https://pokeapi.co/api/v2/ability/6/"
+        },
+        {
+            "name": "limber",
+            "url": "https://pokeapi.co/api/v2/ability/7/"
+        },
+        {
+            "name": "sand-veil",
+            "url": "https://pokeapi.co/api/v2/ability/8/"
+        }
+    ]
+}
+
+3. item fling effect with if of 7
+{
+    "effect_entries": [
+        {
+            "effect": "Target will flinch if it has not yet gone this turn.",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }
+    ],
+    "id": 7,
+    "items": [
+        {
+            "name": "kings-rock",
+            "url": "https://pokeapi.co/api/v2/item/198/"
+        },
+        {
+            "name": "razor-fang",
+            "url": "https://pokeapi.co/api/v2/item/304/"
+        }
+    ],
+    "name": "flinch"
+}
+
+4. evolution chain with id of 2
+{
+    "baby_trigger_item": null,
+    "chain": {
+        "evolution_details": [],
+        "evolves_to": [
+            {
+                "evolution_details": [
+                    {
+                        "gender": null,
+                        "held_item": null,
+                        "item": null,
+                        "known_move": null,
+                        "known_move_type": null,
+                        "location": null,
+                        "min_affection": null,
+                        "min_beauty": null,
+                        "min_happiness": null,
+                        "min_level": 16,
+                        "needs_overworld_rain": false,
+                        "party_species": null,
+                        "party_type": null,
+                        "relative_physical_stats": null,
+                        "time_of_day": "",
+                        "trade_species": null,
+                        "trigger": {
+                            "name": "level-up",
+                            "url": "https://pokeapi.co/api/v2/evolution-trigger/1/"
+                        },
+                        "turn_upside_down": false
+                    }
+                ],
+                "evolves_to": [
+                    {
+                        "evolution_details": [
+                            {
+                                "gender": null,
+                                "held_item": null,
+                                "item": null,
+                                "known_move": null,
+                                "known_move_type": null,
+                                "location": null,
+                                "min_affection": null,
+                                "min_beauty": null,
+                                "min_happiness": null,
+                                "min_level": 36,
+                                "needs_overworld_rain": false,
+                                "party_species": null,
+                                "party_type": null,
+                                "relative_physical_stats": null,
+                                "time_of_day": "",
+                                "trade_species": null,
+                                "trigger": {
+                                    "name": "level-up",
+                                    "url": "https://pokeapi.co/api/v2/evolution-trigger/1/"
+                                },
+                                "turn_upside_down": false
+                            }
+                        ],
+                        "evolves_to": [],
+                        "is_baby": false,
+                        "species": {
+                            "name": "charizard",
+                            "url": "https://pokeapi.co/api/v2/pokemon-species/6/"
+                        }
+                    }
+                ],
+                "is_baby": false,
+                "species": {
+                    "name": "charmeleon",
+                    "url": "https://pokeapi.co/api/v2/pokemon-species/5/"
+                }
+            }
+        ],
+        "is_baby": false,
+        "species": {
+            "name": "charmander",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/4/"
+        }
+    },
+    "id": 2
+}
+5. get poke by location id #77
+{
+    "areas": [
+        {
+            "name": "ice-path-1f",
+            "url": "https://pokeapi.co/api/v2/location-area/244/"
+        },
+        {
+            "name": "ice-path-b1f",
+            "url": "https://pokeapi.co/api/v2/location-area/245/"
+        },
+        {
+            "name": "ice-path-b2f",
+            "url": "https://pokeapi.co/api/v2/location-area/246/"
+        },
+        {
+            "name": "ice-path-b3f",
+            "url": "https://pokeapi.co/api/v2/location-area/247/"
+        }
+    ],
+    "game_indices": [
+        {
+            "game_index": 217,
+            "generation": {
+                "name": "generation-iv",
+                "url": "https://pokeapi.co/api/v2/generation/4/"
+            }
+        }
+    ],
+    "id": 77,
+    "name": "ice-path",
+    "names": [
+        {
+            "language": {
+                "name": "fr",
+                "url": "https://pokeapi.co/api/v2/language/5/"
+            },
+            "name": "Route de Glace"
+        },
+        {
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            },
+            "name": "Ice Path"
+        }
+    ],
+    "region": {
+        "name": "johto",
+        "url": "https://pokeapi.co/api/v2/region/2/"
+    }
+}
