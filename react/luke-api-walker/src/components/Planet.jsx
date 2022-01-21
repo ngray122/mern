@@ -12,17 +12,17 @@ const Planet = () => {
     //get the id from the param to make call
     //
 
-    useEffect(() => {
-        axios.get("https://swapi.dev/api/planets/")
-            .then(response => {
-                // console.log("response =>", response.data);
-                setPlanetList(response.data.results)
-                console.log(listOfPlanets)
-            })
-            .catch(err => {
-                console.log("error!! ====> ", err);
-            })
-    }, [id])
+    // useEffect(() => {
+    //     axios.get("https://swapi.dev/api/planets/")
+    //         .then(response => {
+    //             // console.log("response =>", response.data);
+    //             setPlanetList(response.data.results)
+    //             console.log(listOfPlanets)
+    //         })
+    //         .catch(err => {
+    //             console.log("error!! ====> ", err);
+    //         })
+    // }, [id])
 
 
 
