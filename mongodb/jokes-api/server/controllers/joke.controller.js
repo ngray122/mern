@@ -8,15 +8,12 @@ module.exports.sayHello = (req, res) => {
 
 }
 
-
 module.exports.findAll = (req, res) => {
     Joke.find()
         .then(allJokes =>
             res.json({ result: allJokes }))
         .catch(err => res.json({ message: 'Something went wrong', error: err }));
 }
-
-
 
 module.exports.findOne = (req, res) => {
     Joke.findOne({ _id: req.params.id })
@@ -25,7 +22,6 @@ module.exports.findOne = (req, res) => {
         .catch(err =>
             res.json({ message: 'Something went wrong', error: err }));
 }
-
 
 module.exports.createNew = (req, res) => {
     console.log("**********", req.body);
@@ -64,4 +60,22 @@ module.exports.delete = (req, res) => {
             res.json({ result: deleteJoke }))
         .catch(err =>
             res.json({ message: 'Something went wrong', error: err }));
+}
+
+
+
+module.exports.findRandomJoke = (req, res) => {
+    console.log("from random joke")
+    // get array of all items in API
+    function getRandomINt(max) {
+        return Math.floor(Math.random() * max)
+    }
+    Joke.find()
+        .then(randomJoke=>{
+            let randomNum = getRandomINt(length)
+            res.json({result: randomJoke})
+        })
+        console.log(randomJoke)
+        .catch(err =>
+            res.json({ message: 'Something went wrong', error: err }))
 }
