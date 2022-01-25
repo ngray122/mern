@@ -1,12 +1,9 @@
 
 const mongoose = require('mongoose');
 
-
 const db_name = "ninjasdb";
 
 mongoose.connect(`mongodb+srv://ngray122:<password>@cluster0.tewol.mongodb.net/${db_name}?retryWrites=true&w=majority`
-
-
 
 
 , {

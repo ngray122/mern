@@ -1,7 +1,8 @@
 
 const express = require('express'); //import express
 
-
+app.use(express.json())
+app.use(express.urlencoded({extended:true}))
 
 const app= express(); //initialize express
 const port = 8000; //specify port

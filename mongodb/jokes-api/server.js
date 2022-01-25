@@ -1,24 +1,20 @@
 const express = require("express");
-const app = express();
-const port = 8000;
+
+const app = express();//instance of exptess
+const port = 8000; // port
 
 
-// connecting to our Mongo db using mongoose from modularized server folder.  Server-folder config-folder config-filename
+//NEED for create
+app.use(express.json())
+app.use(express.urlencoded({extended:true}))
+
+
+// connecting to our Mongo db using mongoose from modularized server folder.  
+//Server-folder config-folder config-filename
 require("./server/config/config")
 
-
-
-
-app.get("/api/jokes", (req, res) => {
-    res.json({ message: "Hello Joke route" });
-});
-
-
-
-
-
-
-
-
+//express routes
+//importing (app) from (app.get)
+require('./server/routes/joke.routes')(app)
 
 app.listen( port, () => console.log(`Listening on port: ${port}`) );
