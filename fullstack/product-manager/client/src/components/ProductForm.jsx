@@ -18,10 +18,10 @@ const ProductForm = () => {
             .then(res =>
                 console.log("SUCCESSFULLY submitted post req ==>", res))
             .catch(err => console.log("error in submitting post request"))
-        // to reset inputs??????
-        // setTitle('');
-        // setPrice(0);
-        // setDescription('');
+
+        setTitle('');
+        setPrice(0);
+        setDescription('');
 
     }
 
@@ -32,15 +32,15 @@ const ProductForm = () => {
             <form onSubmit={submitHandler}>
                 <div className="input-group mb-3">
                     <span className="input-group-text" id="basic-addon1">Title:</span>
-                    <input type="text" className="form-control" placeholder="Add Title" aria-label="Username" aria-describedby="basic-addon1" onChange={(e) => setTitle(e.target.value)} />
+                    <input type="text" value={title} className="form-control" placeholder="Add Title" aria-label="Username" aria-describedby="basic-addon1" onChange={(e) => setTitle(e.target.value)} />
                 </div>
                 <div className="input-group mb-3">
                     <span className="input-group-text" id="basic-addon1">Price:</span>
-                    <input type="number" className="form-control" placeholder="Add Price" aria-label="Username" aria-describedby="basic-addon1" onChange={(e) => setPrice(e.target.value)} />
+                    <input value={price} type="text" className="form-control" placeholder="Add Price" aria-label="Username" aria-describedby="basic-addon1" onChange={(e) => setPrice(e.target.value)} />
                 </div>
                 <div className="input-group mb-3">
                     <span className="input-group-text" id="basic-addon1">Description:</span>
-                    <input type="text" className="form-control" placeholder="Add Description" aria-label="Username" aria-describedby="basic-addon1" onChange={(e) => setDescription(e.target.value)} />
+                    <input value={description} type="text" className="form-control" placeholder="Add Description" aria-label="Username" aria-describedby="basic-addon1" onChange={(e) => setDescription(e.target.value)} />
                 </div>
                 <div>
                     <input className="btn btn-warning m-4" type="submit" value="Create Product" />

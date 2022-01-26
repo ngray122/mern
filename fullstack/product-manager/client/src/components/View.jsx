@@ -7,18 +7,20 @@ import {
 
 
 const View = () => {
-  // when getting multiple, use an array
+  // when getting multiple objects, use an array
   let [arrOfObs, setArrOfObs] = useState([])
 
-  // useEffect needs a CALLBACK function!!!!!
+
+  // useEffect NEEDS a CALLBACK function!!!!!
   useEffect(() =>
     axios.get("http://localhost:8000/api/product/all")
       .then(res => {
         // console.log("RESPONSE get all ====>>>> ", res.data.result)
         setArrOfObs(res.data.result)
-        console.log("arrOfObs log ===> ", arrOfObs)
+        // Do not conosle log state var, log res!!!
+        // console.log("arrOfObs log ==> ", arrOfObs)
       })
-      .catch(err => console.log("error in submitting get request"))
+      .catch(err => console.log("error in submitting get all request"))
     , [])
 
   return (
@@ -29,14 +31,12 @@ const View = () => {
       {
         arrOfObs.map((productObj, i) => {
           return (
-            <Link style={{textDecoration: "none"}}><h4>{productObj.title}</h4></Link>
+          
+            <Link key={i} to={`/product/view/${productObj._id}`} style={{ textDecoration: "none" }}><h4 >{productObj.title}</h4></Link>
           )
         }
         )
-
       }
-
-
     </div>
 
   )

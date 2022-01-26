@@ -12,4 +12,7 @@ module.exports = (app) => {
 
     // GET ALL products
     app.get('/api/product/all', ProductController.findAllProducts)
+
+    // GET ONE product
+    app.get('/api/product/:id', ProductController.findOneProduct)
 }
