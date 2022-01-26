@@ -15,3 +15,11 @@ module.exports.createProduct = (req, res) => {
         })
         
 };
+
+
+module.exports.findAllProducts = (req, res) => {
+    Product.find()
+        .then(allProducts => 
+            res.json({result: allProducts}))
+        .catch(err => res.json({message: "Something went wrong with fin all", error:err}))
+}

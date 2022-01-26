@@ -11,17 +11,19 @@ const ProductForm = () => {
 
     const submitHandler = (e) => {
         e.preventDefault();
-        console.log(title, price, description)
+        // console.log("State variables =====> ", title, price, description)
         let formInputObj = { title, price, description }
-        console.log(formInputObj)
+        // console.log("OBJ from state ===> ", formInputObj)
         axios.post("http://localhost:8000/api/product/create", formInputObj)
             .then(res =>
-                console.log("Response ------>>>>>>>>", res))
+                console.log("SUCCESSFULLY submitted post req ==>", res))
             .catch(err => console.log("error in submitting post request"))
+        // to reset inputs??????
+        // setTitle('');
+        // setPrice(0);
+        // setDescription('');
+
     }
-
-
-
 
 
     return (
@@ -41,7 +43,7 @@ const ProductForm = () => {
                     <input type="text" className="form-control" placeholder="Add Description" aria-label="Username" aria-describedby="basic-addon1" onChange={(e) => setDescription(e.target.value)} />
                 </div>
                 <div>
-                    <input type="submit" value="Create Product" />
+                    <input className="btn btn-warning m-4" type="submit" value="Create Product" />
                 </div>
             </form>
         </div>

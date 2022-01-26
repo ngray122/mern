@@ -1,7 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import Main from './views/Main';
+// import Main from './views/Main';
+import ProductForm from "./components/ProductForm"
+import View from './components/View';
 import {
   BrowserRouter,
   Switch,
@@ -10,15 +11,16 @@ import {
 
 function App() {
   return (
+    // Front End routes just tell me what component to show
     <BrowserRouter >
       <div className="App container">
-    <Switch>
-
-      <Route exact path = "/">
-          <Main/>
-      </Route>
-    </Switch>
-    </div>
+        <Switch>
+          <Route exact path="/">
+            <ProductForm></ProductForm>
+            <View></View>
+          </Route>
+        </Switch>
+      </div>
     </BrowserRouter>
   );
 }

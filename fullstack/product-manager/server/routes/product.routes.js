@@ -6,5 +6,10 @@ const ProductController = require('../controllers/product.controller');
 
 module.exports = (app) => {
     // app.get('/api', ProductController.index);
+
+    // CREATE product
     app.post('/api/product/create', ProductController.createProduct)
+
+    // GET ALL products
+    app.get('/api/product/all', ProductController.findAllProducts)
 }
