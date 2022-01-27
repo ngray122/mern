@@ -23,9 +23,7 @@ const EditForm = () => {
 
 
 
-
-
-    // Don't forget to add name="" for each property
+    // Don't forget to add name="" for each property to prepopulate
     const onChangeHandler = (e) => {
         console.log("Chahe handle workking")
         setOneProduct({

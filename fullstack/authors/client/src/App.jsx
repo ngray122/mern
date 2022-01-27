@@ -1,16 +1,39 @@
 import logo from './logo.svg';
 import './App.css';
-import { 
+import {
   BrowserRouter,
-  
- } from 'react-router-dom';
+  Route,
+  Switch
+
+} from 'react-router-dom';
+import ViewAllAuthors from './components/ViewAllAuthors';
+import AddAuthorForm from './components/AddAuthorForm';
+import EditAuthor from './components/EditAuthor';
 
 function App() {
+
+
+
   return (
 
-    <div className="App">
-<h1>hello from app</h1>
-    </div>
+    <BrowserRouter >
+      <div className="App container">
+        <Route exact path="/">
+          <ViewAllAuthors></ViewAllAuthors>
+        </Route>
+        <Switch>
+          <Route exact path="/author/update/:id">
+          <EditAuthor></EditAuthor>
+          </Route>
+          <Route exact path="/author/addnew">
+            <AddAuthorForm></AddAuthorForm>
+          </Route>
+        </Switch>
+      </div>
+
+    </BrowserRouter>
+
+
   );
 }
 
