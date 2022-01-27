@@ -65,9 +65,9 @@ const EditAuthor = () => {
 
     return (
         <div>
-            <h1>Favorite Authors</h1>
+            <h1 className="m-4">Favorite Authors</h1>
             <Link to= {'/'}>Home</Link>
-            <p>Edit this author:</p>
+            <p className="m-4">Edit this author:</p>
             <form onSubmit={submitHandler} className="border border-dark p-md-5">
                 <div className="input-group mb-3">
                     <span className="input-group-text" id="basic-addon1">Name:</span>

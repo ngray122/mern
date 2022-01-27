@@ -9,6 +9,7 @@ import {
 import ViewAllAuthors from './components/ViewAllAuthors';
 import AddAuthorForm from './components/AddAuthorForm';
 import EditAuthor from './components/EditAuthor';
+import Grid from './components/Grid';
 
 function App() {
 
@@ -19,7 +20,8 @@ function App() {
     <BrowserRouter >
       <div className="App container">
         <Route exact path="/">
-          <ViewAllAuthors></ViewAllAuthors>
+          {/* <ViewAllAuthors></ViewAllAuthors> */}
+          <Grid/>
         </Route>
         <Switch>
           <Route exact path="/author/update/:id">

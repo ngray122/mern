@@ -40,10 +40,10 @@ const AddAuthorForm = (props) => {
     }
 
     return (
-        <div>
-            <h1>Favorite Authors</h1>
+        <div className="container w-50">
+            <h1 className="m-4">Favorite Authors</h1>
             <Link to= {'/'}>Home</Link>
-            <h3>Add a new author:</h3>
+            <h3 className="m-4">Add a new author:</h3>
             <form onSubmit={submitHandler}>
                 <div className="input-group mb-3">
                     <span className="input-group-text" id="basic-addon1">Name:</span>

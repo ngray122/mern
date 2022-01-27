@@ -44,12 +44,12 @@ const ViewAllAuthors = () => {
 
 
     return (
-        <div>
-            <h1>Favorite Authors</h1>
+        <div className='flex justify-content-center'>
+            <h1 className="m-4">Favorite Authors</h1>
             <Link to= {'/author/addnew'}>Add an Author</Link>
-            <h3>We have quotes by:</h3>
+            <h3 className="m-4">We have quotes by:</h3>
             <br />
-            <table className="table table-striped table-bordered">
+            <table className="table table-bordered table-striped align-middle">
                 <thead>
                     <tr>
                         <th>Author</th>
@@ -60,18 +60,14 @@ const ViewAllAuthors = () => {
                     arrOfAuthorObj.map((authorObj, i) => {
                         return (
                             <tbody key={i}>
-                                <tr>
+                                <tr className="">
+                                {/* <th scope="row"></th> */}
                                     <td>{authorObj.name}</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"></th>
                                     <td> <Link to={`/author/update/${authorObj._id}`} className="btn btn-primary m-3">Edit</Link>
                                         <button onClick={() => deleteOneAuthor(authorObj._id)} className="btn btn-primary">Delete Author</button>
-
-
                                     </td>
-
                                 </tr>
+                            
                             </tbody>
 
 
