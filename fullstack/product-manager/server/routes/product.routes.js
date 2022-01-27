@@ -15,4 +15,11 @@ module.exports = (app) => {
 
     // GET ONE product
     app.get('/api/product/:id', ProductController.findOneProduct)
+
+
+    // DELETE product
+    app.delete('/api/product/delete/:id', ProductController.deleteProduct)
+
+    // UPDATE product
+    app.put('/api/product/update/:id', ProductController.updateProduct)
 }
