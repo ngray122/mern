@@ -8,8 +8,13 @@ const { Product } = require('../models/product.model');
 // }
 
 module.exports.createProduct = (req, res) => {
+
     Product.create(req.body)
-        .then(newProd => res.json({ newProd: newProd }))
+    
+        .then(newProd => {
+            // console.log("Helloooooo")
+            res.json({ newProd: newProd })
+        })
         .catch(err => {
             res.json({ error: err })
         })

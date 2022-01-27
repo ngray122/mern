@@ -18,8 +18,6 @@ const View = (props) => {
       .then(res => {
         // console.log("RESPONSE get all ====>>>> ", res.data.result)
         setArrOfObs(res.data.result)
-        // Do not conosle log state var, log res!!!
-        // console.log("arrOfObs log ==> ", arrOfObs)
       })
       .catch(err => console.log("error in submitting get all request"))
     , [deleted, props.refresh])
@@ -45,7 +43,7 @@ const View = (props) => {
           <div key={i} style={{border: "1px solid black"}} className="w-25 m-4 p-2" >
             <Link  to={`/product/view/${productObj._id}`} style={{ textDecoration: "none",color: "black" }}><h4 >{productObj.title}</h4></Link>
 
-            <Link to={`/product/edit/${productObj._id}`} className="btn btn-primary m-3"><p >Edit Product</p></Link>
+            <Link to={`/product/edit/${productObj._id}`} className="btn btn-primary m-3">Edit Product</Link>
 
             <button onClick ={()=>deleteOneProduct(productObj._id)} className="btn btn-primary">Delete Product</button>
             </div>

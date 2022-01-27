@@ -9,8 +9,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 require('./server/config/config');
-require('./server/routes/product.routes')(app); // This is new
+require('./server/routes/product.routes')(app);
 
 
 
-app.listen(port, () => console.log(`Listening on ports ${port}`)) 
+app.listen(port, () => console.log(`Listening on port ${port}`)) 

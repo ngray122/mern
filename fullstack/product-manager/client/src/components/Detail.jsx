@@ -19,7 +19,6 @@ const Detail = () => {
             .then(res => {
                 console.log("RESPONSE get one ====>", res)
                 setProductDetail(res.data.result)
-                // console.log("PROD DETAIL ==>", productDetail)
             })
             .catch(err => console.log("error in submitting get one request"))
         , [])

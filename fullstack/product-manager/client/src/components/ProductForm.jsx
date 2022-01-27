@@ -10,7 +10,7 @@ const ProductForm = (props) => {
     let [description, setDescription] = useState('');
 
     // validation errors
-    let [formErr, setFormErr] = useState('');
+    let [formErr, setFormErr] = useState({});
 
     const history = useHistory();
 
@@ -21,15 +21,23 @@ const ProductForm = (props) => {
         axios.post("http://localhost:8000/api/product/create", formInputObj)
             .then(res => {
                 console.log("SUCCESSFULLY submitted post req ==>", res)
+                // moved up from line 30, after .then Inputs are not being cleared after submit
+                props.setRefresh(!props.refresh)
+                setTitle('');
+                setPrice('');
+                setDescription('');
+                setFormErr({})
+                // e.target.reset() //clears inputs
+                //********* */ validation errors stay on the page after successful submit
                 if (res.data.error) {
                     setFormErr(res.data.error.errors)
                 }
+
             })
             .catch(err => console.log("error in submitting post request", err))
-        props.setRefresh(!props.refresh)
-        e.target.reset() //clears inputs
 
-        
+
+
 
         // const numValidator = (e) => {
         //     // regex: /^[0-9\b]+$/; for form number input? Not able to inout floating point numbers
