@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useParams, useHistory } from 'react-router-dom';
 import {
     Link
-  } from "react-router-dom"
+} from "react-router-dom"
 
 
 
@@ -25,12 +25,12 @@ const Detail = () => {
         , [])
 
     const deleteOneProduct = () => {
-        console.log("Delete Works")
         axios.delete(`http://localhost:8000/api/product/delete/${id}`)
             .then(res =>
-                console.log("Delete response ==> ", res)
+                // with console log not commented out, '/' does not refresh with delted item.  Hard refresh removes item.  Is it not hitting the .push because of the console.log
+                // console.log("SUCCESS Delete response ==> ", res),
+                history.push('/')
             )
-            // history.push('/')
             .catch(err => console.log("error in submitting delete request"))
     }
 
@@ -44,7 +44,7 @@ const Detail = () => {
             <p>Description: {productDetail.description}</p>
             <p>Product Id: {productDetail._id}</p>
             <button onClick={deleteOneProduct} className="btn btn-info">Delete Product</button>
-            <Link  to={'/'} className="btn btn-info mx-3"><p >Home</p></Link>
+            <Link to={'/'} className="btn btn-info mx-3"><p >Home</p></Link>
         </div>
 
 

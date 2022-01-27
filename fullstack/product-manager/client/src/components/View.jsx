@@ -43,7 +43,7 @@ const View = (props) => {
         arrOfObs.map((productObj, i) => {
           return (
           <div key={i} style={{border: "1px solid black"}} className="w-25 m-4 p-2" >
-            <Link  to={`/product/view/${productObj._id}`} style={{ textDecoration: "none" }}><h4 >{productObj.title}</h4></Link>
+            <Link  to={`/product/view/${productObj._id}`} style={{ textDecoration: "none",color: "black" }}><h4 >{productObj.title}</h4></Link>
 
             <Link to={`/product/edit/${productObj._id}`} className="btn btn-primary m-3"><p >Edit Product</p></Link>
 

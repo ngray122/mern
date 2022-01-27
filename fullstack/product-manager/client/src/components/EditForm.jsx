@@ -40,14 +40,12 @@ const EditForm = () => {
 
     const onSubmitHandler = (e) => {
         e.preventDefault();
-
         axios.put(`http://localhost:8000/api/product/update/${id}`, oneProduct)
             .then(res => {
                 console.log("RESPONSE get updated====>", res)
                 if (res.data.error) {
                     setEditErr(res.data.error.errors)
                 }
-
                 history.push('/')
             })
             .catch(err => console.log("error in submitting get one request"))
@@ -59,8 +57,8 @@ const EditForm = () => {
 
     return (
         <div >
-            <h1>Edit Product</h1>
-            <form onSubmit={onSubmitHandler} style={{border: "1px solid black"}}>
+            <h1 className="mb-4">Edit Product</h1>
+            <form onSubmit={onSubmitHandler} className="border border-dark p-md-5">
                 <div className="input-group mb-3">
                     <span className="input-group-text" id="basic-addon1">Title:</span>
                     <input type="text" name="title" value={oneProduct.title} className="form-control" placeholder="Add Title" aria-label="Username" aria-describedby="basic-addon1" onChange={onChangeHandler} />

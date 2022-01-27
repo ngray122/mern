@@ -8,7 +8,10 @@ const ProductForm = (props) => {
     let [title, setTitle] = useState('');
     let [price, setPrice] = useState('');
     let [description, setDescription] = useState('');
+
+    // validation errors
     let [formErr, setFormErr] = useState('');
+
     const history = useHistory();
 
 
