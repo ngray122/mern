@@ -13,6 +13,7 @@ const EditAuthor = () => {
 
     let [name, setName] = useState('');
     let [oneAuthor, setOneAuthor] = useState({})
+    let [err, setErr] = useState(true)
 
     // validation errors
     let [formErr, setFormErr] = useState({});
@@ -28,7 +29,11 @@ const EditAuthor = () => {
                 console.log("RESPONSE get one ====>", res)
                 setOneAuthor(res.data.result)
             })
-            .catch(err => console.log("error in submitting get one request"))
+            .catch(err => {
+                setErr(true)
+                console.log("error in submitting get one request")
+            }
+            )
         , [])
 
 
@@ -62,13 +67,22 @@ const EditAuthor = () => {
     }
 
 
+    
+    console.log(err)
+    if(err === true) {
+        return <div>
+            <h1>The ID you entered does not exist!!!</h1>
+            <Link to='/author/addnew' className="btn btn-primary mx-3">Click here to add Author</Link>
+            </div>
+    }
+
 
     return (
-        <div>
+        <div className="container">
             <h1 className="m-4">Favorite Authors</h1>
-            <Link to= {'/'}>Home</Link>
-            <p className="m-4">Edit this author:</p>
-            <form onSubmit={submitHandler} className="border border-dark p-md-5">
+            <Link to={'/'}>Home</Link>
+            <h3 className="m-4">Edit this author:</h3>
+            <form onSubmit={submitHandler} className="border border-dark p-md-5 w-50">
                 <div className="input-group mb-3">
                     <span className="input-group-text" id="basic-addon1">Name:</span>
                     <input type="text" name="name" value={oneAuthor.name} className="form-control" placeholder="Add Title" aria-label="Username" aria-describedby="basic-addon1" onChange={onChangeHandler} />

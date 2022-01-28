@@ -1,4 +1,5 @@
 import React from 'react';
+
 import ViewAllAuthors from './ViewAllAuthors';
 
 const Grid = () => {
@@ -13,6 +14,7 @@ const Grid = () => {
                 </div>
                 <div className='col'>
                     <ViewAllAuthors />
+               
                 </div>
                 <div className='col'>
 

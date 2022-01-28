@@ -23,7 +23,14 @@ const ViewAllAuthors = () => {
     useEffect(() =>
         axios.get('http://localhost:8000/api/author/all')
             .then(res => {
+                
+                res.data.result.sort(function (a, b) {
+                    if (a.name < b.name) { return -1; }
+                    if (a.name > b.name) { return 1; }
+                    return 0;
+                })
                 setArrOfAuthorObj(res.data.result)
+
                 console.log('GET ALL SUCCESS ==>> ', res)
             })
             .catch(err => console.log("error in submitting get all request")), [deleted])
@@ -43,10 +50,11 @@ const ViewAllAuthors = () => {
 
 
 
+
     return (
         <div className='flex justify-content-center'>
             <h1 className="m-4">Favorite Authors</h1>
-            <Link to= {'/author/addnew'}>Add an Author</Link>
+            <Link to={'/author/addnew'}>Add an Author</Link>
             <h3 className="m-4">We have quotes by:</h3>
             <br />
             <table className="table table-bordered table-striped align-middle">
@@ -57,17 +65,18 @@ const ViewAllAuthors = () => {
                     </tr>
                 </thead>
                 {
+
                     arrOfAuthorObj.map((authorObj, i) => {
                         return (
                             <tbody key={i}>
                                 <tr className="">
-                                {/* <th scope="row"></th> */}
+                                    {/* <th scope="row"></th> */}
                                     <td>{authorObj.name}</td>
                                     <td> <Link to={`/author/update/${authorObj._id}`} className="btn btn-primary m-3">Edit</Link>
                                         <button onClick={() => deleteOneAuthor(authorObj._id)} className="btn btn-primary">Delete Author</button>
                                     </td>
                                 </tr>
-                            
+
                             </tbody>
 
 
