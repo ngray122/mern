@@ -13,7 +13,7 @@ const EditAuthor = () => {
 
     let [name, setName] = useState('');
     let [oneAuthor, setOneAuthor] = useState({})
-    let [err, setErr] = useState(true)
+    let [err, setErr] = useState(false)
 
     // validation errors
     let [formErr, setFormErr] = useState({});
@@ -30,7 +30,6 @@ const EditAuthor = () => {
                 setOneAuthor(res.data.result)
             })
             .catch(err => {
-                setErr(true)
                 console.log("error in submitting get one request")
             }
             )
@@ -63,18 +62,13 @@ const EditAuthor = () => {
                     history.push('/')
                 }
             })
-            .catch(err => console.log("error in submitting put request", err))
+            .catch(err => {
+                console.log("error in submitting put request", err)
+
+            })
     }
 
 
-    
-    console.log(err)
-    if(err === true) {
-        return <div>
-            <h1>The ID you entered does not exist!!!</h1>
-            <Link to='/author/addnew' className="btn btn-primary mx-3">Click here to add Author</Link>
-            </div>
-    }
 
 
     return (

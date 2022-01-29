@@ -5,13 +5,13 @@ const ThingSchema = new mongoose.Schema({
     
     firstName: { 
             type: String,
-            required: [true, "Title cannot be left blank!"],
+            required: [true, "firstName be left blank!"],
             minlength: [2, "Title must have at least 2 characters"]
         },
     lastName: { 
-            type: Number,
-            required: [true, "Price cannot be left blank!"],
-            min: [0, "Minimum price cannot be less than 0!"],
+            type: String,
+            required: [true, "lastName cannot be left blank!"],
+            minlength: [2, "ln must have at least 2 characters"],
 
         },
     description: {

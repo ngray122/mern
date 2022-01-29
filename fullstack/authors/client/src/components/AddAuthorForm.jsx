@@ -23,8 +23,7 @@ const AddAuthorForm = (props) => {
         axios.post("http://localhost:8000/api/author/create", formInputObj)
             .then(res => {
                 console.log("SUCCESSFULLY submitted post req ==>", res)
-                // moved up from line 30, after .then Inputs are not being cleared after submit
-                // setFormErr({})
+              
                 if (res.data.error) {
                     setFormErr(res.data.error.errors)
                 } else {

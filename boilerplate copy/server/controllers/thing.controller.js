@@ -1,4 +1,4 @@
-const Thing = require('../models/thing.model');
+const {Thing} = require('../models/thing.model');
 
 // Make sure routes are uncommented in server.js
 // module.exports.index = (req, res) => {
@@ -9,7 +9,7 @@ const Thing = require('../models/thing.model');
 
 module.exports.createThing = (req, res) => {
     Thing.create(req.body)
-        .then(newProd => res.json({ newProd: newProd }))
+        .then(newThing => res.json({ result: newThing }))
         .catch(err => {
             res.json({ error: err })
         })

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const db_name = "ENTERdbNAMEHERE"
+const db_name = "thing"
 
 
 mongoose.connect(`mongodb+srv://ngray122:root@cluster0.tewol.mongodb.net/${db_name}?retryWrites=true&w=majority`, {

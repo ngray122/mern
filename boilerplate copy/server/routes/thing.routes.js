@@ -5,7 +5,7 @@ const ThingController = require('../controllers/thing.controller');
 // Routes or API endpoints that call ===> module.exports.FUNCTION from controller <=== which is the import ThingController
 
 module.exports = (app) => {
-    // app.get('/api', ThingController.index);
+    // app.get('/api/hello', ThingController.index);
 
     // CREATE product
     app.post('/api/things/create', ThingController.createThing)

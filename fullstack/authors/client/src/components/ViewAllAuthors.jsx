@@ -23,7 +23,7 @@ const ViewAllAuthors = () => {
     useEffect(() =>
         axios.get('http://localhost:8000/api/author/all')
             .then(res => {
-                
+                // sort alpabetically. Upper case/lowercase?
                 res.data.result.sort(function (a, b) {
                     if (a.name < b.name) { return -1; }
                     if (a.name > b.name) { return 1; }

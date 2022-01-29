@@ -10,6 +10,7 @@ import ViewAllAuthors from './components/ViewAllAuthors';
 import AddAuthorForm from './components/AddAuthorForm';
 import EditAuthor from './components/EditAuthor';
 import Grid from './components/Grid';
+import IdError from './components/IdError';
 
 function App() {
 
@@ -21,14 +22,17 @@ function App() {
       <div className="App container">
         <Route exact path="/">
           {/* <ViewAllAuthors></ViewAllAuthors> */}
-          <Grid/>
+          <Grid />
         </Route>
         <Switch>
           <Route exact path="/author/update/:id">
-          <EditAuthor></EditAuthor>
+            <EditAuthor></EditAuthor>
           </Route>
           <Route exact path="/author/addnew">
             <AddAuthorForm></AddAuthorForm>
+          </Route>
+          <Route exact path='/author/unknownId'>
+            <IdError></IdError>
           </Route>
         </Switch>
       </div>
